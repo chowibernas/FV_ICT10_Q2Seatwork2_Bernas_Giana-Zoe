@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <title>ICT 10 2Q SW2 Student Grade Calculator</title>
+
+    <style>
+
+        body {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 50px;
+            background-color: #758A93;
+            color: #ECD5BC;
+            width: 500px;
+            height: 125px;
+            border-radius: 30px;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        .grade_item {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: 15px;
+        }
+
+        button {
+         border-radius: 30px;
+         width: 150px;
+         height: 50px;
+         background-color: #758A93;
+         color: #ECD5BC;
+         border-color: white;
+        }
+
+        button:hover {
+            color: #E9B63B;
+        }
+
+        span {
+            color: #E9B63B;
+        }
+
+
+    </style>
+
+    <body>
+        <div class="container">
+            <br><br>
+            <h1>Student <span>Grade</span> Calculator</h1>
+            <p> This is a very simple website that requires your Student Information and Student Grades in order to calculate your GWA (General Weighted Average). </p>
+
+            <br><br>
+
+            <h2> Student's <span>Information</span> </h2>
+            <div class="name">
+                <input type="text" placeholder="First Name" id="studentFirstName">
+                <input type="text" placeholder="Last Name" id="studentLastName">
+            </div>
+
+            <br><br>
+
+            <h2> Student's <span>Grades</span> </h2>
+        
+        <div class="grade_item">
+          <h3>Science:</h3> 
+          <input type="number" id="grade_Science">
+        </div>
+
+        <div class="grade_item">
+          <h3>English:</h3> 
+          <input type="number" id="grade_English">
+        </div>
+
+        <div class="grade_item">
+          <h3>Math:</h3> 
+          <input type="number" id="grade_Math">
+        </div>
+
+        <div class="grade_item">
+          <h3>Philosophy:</h3> 
+          <input type="number" id="grade_Philosophy">
+        </div>
+
+        <div class="grade_item">
+          <h3>Filipino:</h3> 
+          <input type="number" id="grade_Filipino">
+        </div>
+
+        <div class="grade_item">
+          <h3>ICT:</h3> 
+          <input type="number" id="grade_ICT">
+        </div>
+
+        <div class="grade_item">
+          <h3>PE:</h3> 
+          <input type="number" id="grade_PE">
+        </div>
+
+        <div class="grade_item">
+          <h3>VE:</h3> 
+          <input type="number" id="grade_VE">
+        </div>
+
+        <div class="grade_item">
+          <h3>Music and Arts:</h3>
+          <input type="number" id="grade_Music and Arts">
+        </div>
+
+        <div class="grade_item">
+          <h3>CAT:</h3> 
+          <input type="number" id="grade_CAT">
+        </div>
+
+        <div class="grade_item">
+          <h3>TLE:</h3> 
+          <input type="number" id="grade_TLE">
+        </div>
+            
+
+            <br><br>
+
+            <button py-click="general_weighted_average">Calculate GWA</button>
+        </div>
+
+        <br>
+
+        <div id="pfgrades"></div>
+
+        <!--LINE BREAK-->
+        <div id="student_info" style="font-weight: bold;"></div>
+        <br>
+        <div id="allGrades" style="white-space: pre;"></div>
+        <br>
+        <div id="finalGWA" style="font-weight: bold; margin-top: 10px"></div>
+        </div>
+
+    </body>
+    <script type="py" src="main.py"></script>
+    </head>
+    </html>
